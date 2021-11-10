@@ -50,7 +50,7 @@ const OurServices: NextPage = () => {
               onClick={() => setActiveItem(ServicesOptions.BrandingDesign)}
             >
               <BrandingDesign />
-              <p>BRANDING DESIGN</p>
+              <p>BRAND</p>
             </div>
             <div
               className={
@@ -72,7 +72,7 @@ const OurServices: NextPage = () => {
               onClick={() => setActiveItem(ServicesOptions.VideoProduction)}
             >
               <VideoProduction />
-              <p>VIDEO PRODUCTION</p>
+              <p>VIDEO</p>
             </div>
             <div
               className={
