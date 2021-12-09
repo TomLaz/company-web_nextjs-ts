@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
     ref: '#item1',
@@ -13,7 +14,7 @@ export default [
   },
   {
     ref: '#item4',
-    value: 'WORK PROCESS'
+    value: 'LATEST NEWS'
   },
   {
     ref: '#item5',

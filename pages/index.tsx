@@ -1,14 +1,16 @@
-import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { useContext } from 'react';
-import About from '../components/About/About';
-import Header from '../components/Header/Header';
-import OurServices from '../components/OurServices/OurServices';
-import Presentation from '../components/Presentation/Presentation';
+import React, { useContext } from 'react';
 import { GlobalContext } from '../context/Global.provider';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Header = dynamic(() => import( '../components/Header/Header' ));
+const Presentation = dynamic(() => import( '../components/Presentation/Presentation' ));
+const About = dynamic(() => import( '../components/About/About' ));
+const OurServices = dynamic(() => import( '../components/OurServices/OurServices' ));
+const LatestNews = dynamic(() => import( '../components/LatestNews/LatestNews' ));
+
+const Home: React.FC = () => {
   const { data: { showMenu } } = useContext( GlobalContext );
 
   return (
@@ -25,11 +27,7 @@ const Home: NextPage = () => {
           <Presentation />
           <About />
           <OurServices />
-          <div id='item4' className={styles.box} style={{backgroundColor: '#6b6b6b'}}>Cuarto</div>
-          <div id='item5' className={styles.box} style={{backgroundColor: '#313131'}}>Quinto</div>
-          <div id='item6' className={styles.box} style={{backgroundColor: '#242424'}}>Sexto</div>
-          <div id='item7' className={styles.box} style={{backgroundColor: '#252020'}}>Séptimo</div>
-          <div id='item8' className={styles.box} style={{backgroundColor: '#000000'}}>Octavo</div>
+          <LatestNews />
         </main>
       }
     </>
