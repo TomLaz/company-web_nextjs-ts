@@ -6,6 +6,8 @@ html,
 body {
   --color-grey-50: #f4effa;
   --color-grey-100: #dfdbe6;
+  --color-grey-125: #ffffffbf;
+  --color-grey-150: #acafba;
   --color-grey-200: #b2adb8;
   --color-grey-300: #a7a3ae;
   --color-grey-400: #918d96;
@@ -14,6 +16,7 @@ body {
   --color-grey-700: #4f4c52;
   --color-grey-800: #343036;
   --color-grey-900: #221f23;
+  --color-grey-950: #0712228f;
 
   --color-primary-10: #ffffff;
   --color-primary-25: #fafafa;
@@ -23,7 +26,8 @@ body {
   --color-primary-200: #AFD275;
   --color-primary-250: #26b5f2;
   --color-primary-300: #E7717D;
-  --color-primary-350: #7E685A;
+  --color-primary-350: #ff5656;
+  --color-primary-400: #7E685A;
 
   --color-success-100: #a2f0bc;
   --color-success-500: #12bd4b;

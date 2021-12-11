@@ -1,8 +1,8 @@
-import React from 'react';
 import type { NextPage } from 'next';
-import styles from './Header.module.css';
-import MobileHeader from './MobileHeader/MobileHeader';
+import React from 'react';
 import DesktopHeader from './DesktopHeader/DesktopHeader';
+import { HeaderContainer } from './Header.styles';
+import MobileHeader from './MobileHeader/MobileHeader';
 
 const Header: NextPage = () => {
   const [renderedComponent, setRenderedComponent] = React.useState(<></>);
@@ -15,9 +15,9 @@ const Header: NextPage = () => {
   },[]);
 
   return (
-    <header className={styles.header}>
+    <HeaderContainer>
       {renderedComponent}
-    </header>
+    </HeaderContainer>
   );
 };
 

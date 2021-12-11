@@ -35,7 +35,7 @@
 
 .item:after {
   transition: all ease-in-out .2s;
-  background: none repeat scroll 0 0 var(--color-primary-250);
+  background: none repeat scroll 0 0 var(--color-primary-350);
   content: "";
   display: block;
   height: 4px;

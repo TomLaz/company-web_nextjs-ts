@@ -5,6 +5,7 @@ import Image from 'next/image';
 const Presentation: NextPage = () => {
   return (
     <section
+      data-aos='fade-up'
       id='item1'
       className={styles.container}>
         <Image

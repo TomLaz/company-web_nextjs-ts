@@ -24,6 +24,7 @@ const OurServices: NextPage = () => {
   return (
     <section
       id='item3'
+      data-aos='fade-up'
       className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.image}>

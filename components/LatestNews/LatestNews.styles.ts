@@ -86,16 +86,16 @@ export const LatestNewsGallery = styled.div`
 
 export const LatestNewsMore = styled.div`
   height: 20vh;
-  color: var(--color-grey-400);
   align-items: center;
   display: flex;
   justify-content: center;
   margin: auto auto 30px auto;
   font-weight: 500;
   letter-spacing: 7px;
-  font-size: 13px;
   cursor: pointer;
   transition: all ease 0.3s;
+  font-size: var(--size-4);
+  color: var(--color-primary-350);
 
   &:hover {
     letter-spacing: 8px;
@@ -106,10 +106,6 @@ export const LatestNewsMore = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
-    font-size: 11px;
-  }
-
-  @media only screen and (max-width: 360px) {
-    font-size: 10px;
+    font-size: var(--size-3);
   }
 `;
