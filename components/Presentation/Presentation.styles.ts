@@ -1,11 +1,13 @@
-.container {
+import styled from 'styled-components';
+
+export const PresentationContainer = styled.section`
   background-color: var(--color-primary-50);
   height: 93vh;
   width: 100%;
   position: relative;
-}
+`;
 
-.textWrapper {
+export const PresentationTextWrapper = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -22,44 +24,40 @@
   text-align: center;
   width: 100%;
   flex-direction: column;
-}
 
-.textTitle {
+  @media (min-width: 480px) {
+    height: 125px;
+  }
+
+  @media (min-width: 980px) {
+    height: 150px;
+  }
+`;
+
+export const PresentationTextTitle = styled.p`
   font-weight: 800;
   letter-spacing: 3px;
   font-size: var(--size-6);
   margin: 0;
-}
 
-.textDescription {
-  font-size: var(--size-3);
-  margin: 0;
-}
-
-@media (min-width: 480px) {
-  .textWrapper {
-    height: 125px;
-  }
-
-  .textTitle {
+  @media (min-width: 480px) {
     font-size: var(--size-8);
   }
 
-  .textDescription {
-    font-size: var(--size-4);
-  }
-}
-
-@media (min-width: 980px) {
-  .textWrapper {
-    height: 150px;
-  }
-
-  .textTitle {
+  @media (min-width: 980px) {
     font-size: var(--size-12);
   }
+`;
 
-  .textDescription {
+export const PresentationTextDescription = styled.p`
+  font-size: var(--size-3);
+  margin: 0;
+
+  @media (min-width: 480px) {
+    font-size: var(--size-4);
+  }
+
+  @media (min-width: 980px) {
     font-size: var(--size-5);
   }
-}
+`;
