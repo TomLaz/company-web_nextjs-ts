@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import styles from './OurServices.module.css';
 import Image from 'next/image';
 import WebDesign from '../../assets/svg/WebDesign';
 import { useState } from 'react';
@@ -8,6 +7,8 @@ import VideoProduction from '../../assets/svg/VideoProduction';
 import Marketing from '../../assets/svg/Marketing';
 import Development from '../../assets/svg/Development';
 import Photography from '../../assets/svg/Photography';
+import { OurServicesContainer, OurServicesWrapper, OurServicesImage,
+  OurServicesImageOverlay, OurServicesImageText, OurServicesOptionsBox, OurServicesOptionItem } from './OurServices.styles';
 
 enum ServicesOptions {
   BrandingDesign = 'BRANDING DESIGN',
@@ -22,95 +23,70 @@ const OurServices: NextPage = () => {
   const [activeItem, setActiveItem] = useState( ServicesOptions.BrandingDesign );
 
   return (
-    <section
+    <OurServicesContainer
       id='item3'
-      data-aos='fade-up'
-      className={styles.container}>
-        <div className={styles.wrapper}>
-          <div className={styles.image}>
+      data-aos='fade-up'>
+        <OurServicesWrapper>
+          <OurServicesImage>
             <Image
               layout='fill'
               objectFit='cover'
               objectPosition='center'
               src='/images/our-services.png'
               alt='our services' />
-            <div className={styles.imageOverlay}>
-              <div className={styles.imageText}>
+            <OurServicesImageOverlay>
+              <OurServicesImageText>
                 <h2>{activeItem}</h2>
                 <p>Tempora, nisi saepe. Sit amet consectetur adipisicing elit. A labore quaerat neque dolores. Perspiciatis pariatur blanditiis esse, amet dicta praesentium luo dapibus mapio. </p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.optionsBox}>
-            <div
-              className={
-                activeItem === ServicesOptions.BrandingDesign ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+              </OurServicesImageText>
+            </OurServicesImageOverlay>
+          </OurServicesImage>
+          <OurServicesOptionsBox className='our-services-options-box'>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.BrandingDesign}
               onClick={() => setActiveItem(ServicesOptions.BrandingDesign)}
             >
               <BrandingDesign />
               <p>BRAND</p>
-            </div>
-            <div
-              className={
-                activeItem === ServicesOptions.WebDesign ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+            </OurServicesOptionItem>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.WebDesign}
               onClick={() => setActiveItem(ServicesOptions.WebDesign)}
             >
               <WebDesign />
               <p>WEB DESIGN</p>
-            </div>
-            <div
-              className={
-                activeItem === ServicesOptions.VideoProduction ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+            </OurServicesOptionItem>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.VideoProduction}
               onClick={() => setActiveItem(ServicesOptions.VideoProduction)}
             >
               <VideoProduction />
               <p>VIDEO</p>
-            </div>
-            <div
-              className={
-                activeItem === ServicesOptions.Photography ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+            </OurServicesOptionItem>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.Photography}
               onClick={() => setActiveItem(ServicesOptions.Photography)}
             >
               <Photography />
               <p>PHOTOGRAPHY</p>
-            </div>
-            <div
-              className={
-                activeItem === ServicesOptions.Marketing ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+            </OurServicesOptionItem>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.Marketing}
               onClick={() => setActiveItem(ServicesOptions.Marketing)}
             >
               <Marketing />
               <p>MARKETING</p>
-            </div>
-            <div
-              className={
-                activeItem === ServicesOptions.Development ?
-                `${styles.optionItem} ${styles.optionItemSelected}` :
-                styles.optionItem
-              }
+            </OurServicesOptionItem>
+            <OurServicesOptionItem
+              active={activeItem === ServicesOptions.Development}
               onClick={() => setActiveItem(ServicesOptions.Development)}
             >
               <Development />
               <p>DEVELOPMENT</p>
-            </div>
-          </div>
-        </div>
-    </section>
+            </OurServicesOptionItem>
+          </OurServicesOptionsBox>
+        </OurServicesWrapper>
+    </OurServicesContainer>
   );
 };
 

@@ -1,26 +1,23 @@
 import type { NextPage } from 'next';
 import styles from './DesktopHeader.module.css';
+import { DesktopHeaderContainer, DesktopHeaderNavItems, DesktopHeaderNavItem, DesktopHeaderLink } from './DesktopHeader.styles';
 import menuItems from '../HeaderItems';
 
 const DesktopHeader: NextPage = () => {
   return (
-    <nav className={styles.container}>
-      <ul className={styles.navItems}>
+    <DesktopHeaderContainer>
+      <DesktopHeaderNavItems>
         {
           menuItems.map(item => (
-            <li
-              key={item.value}
-              className={styles.navItem}>
-              <a
-                className={styles.item}
-                href={item.ref}>
+            <DesktopHeaderNavItem key={item.value}>
+              <DesktopHeaderLink href={item.ref}>
                 {item.value}
-              </a>
-            </li>
+              </DesktopHeaderLink>
+            </DesktopHeaderNavItem>
           ))
         }
-      </ul>
-    </nav>
+      </DesktopHeaderNavItems>
+    </DesktopHeaderContainer>
   );
 };
 

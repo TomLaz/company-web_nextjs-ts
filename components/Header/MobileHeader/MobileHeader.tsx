@@ -1,9 +1,9 @@
-import { useContext, useState } from 'react';
 import type { NextPage } from 'next';
-import styles from './MobileHeader.module.css';
-import menuItems from '../HeaderItems';
+import { useContext } from 'react';
 import Hamburger from '../../../assets/svg/Hamburger';
 import { GlobalContext } from '../../../context/Global.provider';
+import menuItems from '../HeaderItems';
+import { MobileHeaderContainer, MobileHeaderNavItem, MobileHeaderNavItems, MobileHeaderTopBar } from './MobileHeader.styles';
 
 const MobileHeader: NextPage = () => {
   const { data: { showMenu }, updateShowMenu } = useContext( GlobalContext );
@@ -13,27 +13,26 @@ const MobileHeader: NextPage = () => {
   }
 
   return (
-    <nav className={showMenu ? styles.containerFixed : styles.container}>
-      <div className={styles.topBar}>
+    <MobileHeaderContainer>
+      <MobileHeaderTopBar>
         <div onClick={onBurgerClickHandler}>
           <Hamburger />
         </div>
-      </div>
-      <ul className={showMenu ? styles.navItems : styles.navItemsHidden}>
+      </MobileHeaderTopBar>
+      <MobileHeaderNavItems showMenu={showMenu}>
         {
           menuItems.map(item => (
-            <li
+            <MobileHeaderNavItem
               key={item.value}
-              className={styles.navItem}
               onClick={() => updateShowMenu(false)}>
               <a href={item.ref}>
                 {item.value}
               </a>
-            </li>
+            </MobileHeaderNavItem>
           ))
         }
-      </ul>
-    </nav>
+      </MobileHeaderNavItems>
+    </MobileHeaderContainer>
   );
 };
 
