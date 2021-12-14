@@ -13,6 +13,7 @@ const OurServices = dynamic(() => import( '../components/OurServices/OurServices
 const LatestNews = dynamic(() => import( '../components/LatestNews/LatestNews' ));
 const OurTeam = dynamic(() => import( '../components/OurTeam/OurTeam' ));
 const Skills = dynamic(() => import( '../components/Skills/Skills' ));
+const Contact = dynamic(() => import( '../components/Contact/Contact' ));
 
 const Home: React.FC = () => {
   const { data: { showMenu } } = useContext( GlobalContext );
@@ -38,6 +39,7 @@ const Home: React.FC = () => {
           <LatestNews />
           <OurTeam />
           <Skills />
+          <Contact />
         </main>
       }
     </>

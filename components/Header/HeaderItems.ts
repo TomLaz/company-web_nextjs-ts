@@ -23,5 +23,9 @@ export default [
   {
     ref: '#item6',
     value: 'OUR SKILLS'
+  },
+  {
+    ref: '#item7',
+    value: 'CONTACT'
   }
 ];
