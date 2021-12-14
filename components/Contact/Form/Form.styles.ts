@@ -11,6 +11,10 @@ export const FormFields = styled.div`
   width: 100%;
   gap: 20px;
   justify-content: space-between;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 `;
 
 export const FormField = styled.input`
@@ -19,6 +23,10 @@ export const FormField = styled.input`
   border: none;
   background-color: var(--color-primary-10);
   padding: 20px 25px;
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
 `;
 
 export const FormTextArea = styled.textarea`

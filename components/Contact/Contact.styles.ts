@@ -67,11 +67,16 @@ export const ContactInfo = styled.div`
   }
 
   @media (max-width: 768px) {
+    align-items: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: center;
     margin-bottom: 25px;
+  }
+
+  @media (max-width: 540px) {
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
