@@ -4,6 +4,7 @@ import Facebook from '../../assets/svg/social-media/Facebook';
 import Twitter from '../../assets/svg/social-media/Twitter';
 import Instagram from '../../assets/svg/social-media/Instagram';
 import Youtube from '../../assets/svg/social-media/Youtube';
+import Linkedin from '../../assets/svg/social-media/Linkedin';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState( '' );
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
         <Twitter />
         <Instagram />
         <Youtube />
+        <Linkedin />
       </FooterSocialMedia>
     </FooterContainer>
   );
