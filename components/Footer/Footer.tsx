@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FooterContainer, FooterTitle, FooterDescription, FooterInputBox } from './Footer.styles';
+import { FooterContainer, FooterTitle, FooterDescription, FooterInputBox, FooterSocialMedia } from './Footer.styles';
 import Facebook from '../../assets/svg/social-media/Facebook';
 import Twitter from '../../assets/svg/social-media/Twitter';
 import Instagram from '../../assets/svg/social-media/Instagram';
@@ -16,19 +16,18 @@ const Footer: React.FC = () => {
         <label>EMAIL ADDRESS |</label>
         <input
           className='input-email'
-          style={{backgroundColor: '#00000026', border: 'transparent', width: '300px', color: '#fff' }}
           value={email}
           maxLength={100}
           placeholder='Your email'
           onChange={( e ) => setEmail( e.currentTarget.value )} />
-        <p style={{color: '#fff', fontWeight: 700, padding: '0 20px 0 10px', cursor: 'pointer'}}>SEND</p>
+        <p>SEND</p>
       </FooterInputBox>
-      <div style={{display: 'flex', flexDirection: 'row', gap: '8px'}}>
+      <FooterSocialMedia>
         <Facebook />
         <Twitter />
         <Instagram />
         <Youtube />
-      </div>
+      </FooterSocialMedia>
     </FooterContainer>
   );
 };

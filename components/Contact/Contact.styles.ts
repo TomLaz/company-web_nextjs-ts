@@ -14,9 +14,13 @@ export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const ContactTitle = styled.h2`
@@ -72,6 +76,8 @@ export const ContactInfo = styled.div`
     flex-direction: row;
     justify-content: center;
     margin-bottom: 25px;
+    padding-right: 0;
+    text-align: center;
   }
 
   @media (max-width: 540px) {

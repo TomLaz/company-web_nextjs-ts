@@ -8,6 +8,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   min-height: 50vh;
   width: 100%;
+  padding: 0 15px 30px 15px;
 
   .input-email {
     &:active,
@@ -43,11 +44,50 @@ export const FooterInputBox = styled.div`
   flex-direction: row;
   align-items: center;
 
-  & label {
+  label {
     color: #fff;
     font-weight: 700;
     padding: 0 10px 0 20px;
   }
 
+  input {
+    background-color: transparent;
+    border: transparent;
+    width: 300px;
+    color: #fff;
+  }
 
+  p {
+    color: #fff;
+    font-weight: 700;
+    padding: 0 20px 0 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    label {
+      display: none;
+    }
+
+    input {
+      padding-left: 20px;
+      width: 100%;
+    }
+  }
+`;
+
+export const FooterSocialMedia = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  svg {
+    cursor: pointer;
+  }
+
+  path {
+    fill: var(--color-primary-10);
+  }
 `;
