@@ -14,6 +14,7 @@ const LatestNews = dynamic(() => import( '../components/LatestNews/LatestNews' )
 const OurTeam = dynamic(() => import( '../components/OurTeam/OurTeam' ));
 const Skills = dynamic(() => import( '../components/Skills/Skills' ));
 const Contact = dynamic(() => import( '../components/Contact/Contact' ));
+const Footer = dynamic(() => import( '../components/Footer/Footer' ));
 
 const Home: React.FC = () => {
   const { data: { showMenu } } = useContext( GlobalContext );
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
           <OurTeam />
           <Skills />
           <Contact />
+          <Footer />
         </main>
       }
     </>
