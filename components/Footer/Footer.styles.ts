@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const FooterWrapper = styled.div`
   background-color: var(--color-primary-500);
   display: flex;
   flex-direction: column;
@@ -90,4 +96,14 @@ export const FooterSocialMedia = styled.div`
   path {
     fill: var(--color-primary-10);
   }
+`;
+
+export const FooterCopyright = styled.div`
+  display: flex;
+  background-color: var(--color-grey-800);
+  color: var(--color-primary-100);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
 `;
