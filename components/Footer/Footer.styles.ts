@@ -104,6 +104,6 @@ export const FooterCopyright = styled.div`
   color: var(--color-primary-100);
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 11px;
   width: 100%;
 `;
